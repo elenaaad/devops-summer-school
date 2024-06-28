@@ -14,6 +14,11 @@ jobs:
 
       - name: 'Setup Terraform'
         uses: hashicorp/setup-terraform@v3 
+      
+      - name: 'Set up Google Cloud credentials'
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.TF_VAR_GOOGLE_APPLICATION_CREDENTIALS }}'
 
       - name: 'Terraform fmt'
         id: fmt
@@ -27,7 +32,7 @@ jobs:
       - name: 'Terraform Validate'
         id: validate
         run: terraform validate
-        
+
       - name: 'Terraform Plan'
         id: plan
         run: terraform plan
