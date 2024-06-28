@@ -8,8 +8,3 @@ variable "region" {
   default = "us-central1"
 }
 
-variable "GOOGLE_APPLICATION_CREDENTIALS" {
-  type      = string
-  sensitive = true
-}
-

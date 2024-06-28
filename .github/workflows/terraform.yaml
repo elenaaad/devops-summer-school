@@ -41,7 +41,7 @@ jobs:
       - name: 'Terraform Apply'
         run: echo "Applying terraform"
 
-      - name: 'Output'
+      - name: 'Comment on PR'
         uses: actions/github-script@v7 
         if: github.event_name == 'pull_request'
         env:
