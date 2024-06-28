@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: devops-summer-school
+  description: GitHub repo for DevOps Summer School practice 
+
+spec:
+  type: basic
+  owner: group:default/core-team
+  lifecycle: experimental
