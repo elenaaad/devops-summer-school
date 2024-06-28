@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: 'Checkout repo'
         uses: actions/checkout@v4.1.7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 'Setup Terraform'
         uses: hashicorp/setup-terraform@v3 
