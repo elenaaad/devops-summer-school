@@ -43,6 +43,11 @@ jobs:
         run: terraform apply -auto-approve
         continue-on-error: true
 
+      - name: 'Terraform Destroy'
+        id: destroy
+        run: terraform destroy -auto-approve
+        continue-on-error: true
+
       - name: 'Comment on PR'
         uses: actions/github-script@v7 
         if: github.event_name == 'pull_request'
@@ -79,6 +84,26 @@ jobs:
             
             \`\`\`\n
             ${process.env.PLAN}
+            \`\`\`
+            
+            </details>
+
+            #### Terraform Apply 🛠️\`${{ steps.apply.outcome }}\`
+            
+            <details><summary>Show Apply</summary>
+            
+            \`\`\`\n
+            ${process.env.APPLY}
+            \`\`\`
+            
+            </details>
+           
+            #### Terraform Destroy 🔥\`${{ steps.destroy.outcome }}\`
+            
+            <details><summary>Show Destroy</summary>
+            
+            \`\`\`\n
+            ${process.env.DESTROY}
             \`\`\`
             
             </details>
