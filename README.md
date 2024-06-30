@@ -15,7 +15,7 @@
     - Use the project name from variables
 
 3. **Bind the Previously Created Service Account**
-    - Use the Service Account ID from computed attributes that are exported from the previous step
+    - Use the project name from variables
     - Add the Invoker role to the Service Account. You can search for the Invoker role [here](https://cloud.google.com/run/docs/reference/iam/roles)
     - Use the Service Account email from computed attributes that are exported from the previous step
 
