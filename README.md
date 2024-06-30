@@ -14,13 +14,15 @@
     - Name: `cloud_run_invoker_INITIALE`
     - Use the project name from variables
 
-3. **Bind the Previously Created Service Account**
+3. **Bind the Previously Created Service Account** <small><small><small>There's a catch 🤫 </small></small></small>
     - Use the project name from variables
     - Add the Invoker role to the Service Account. You can search for the Invoker role [here](https://cloud.google.com/run/docs/reference/iam/roles)
     - Use the Service Account email from computed attributes that are exported from the previous step
 
 4. **Make your Cloud Run service internet accesible**
     - Switch from GCP interface your Cloud Run setting - Authentication - Allow unauthenticated invocations 
+
+5. **After you're done, uncomment 'Destroy' step from terraform.yaml and watch it all 🔥🔥🔥🔥**
 
 
 # Hints for later
