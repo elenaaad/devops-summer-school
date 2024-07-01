@@ -22,6 +22,11 @@ resource "google_cloud_run_v2_service" "summer_school" {
 
 # create a Service Account resource
 
+resource "google_service_account" "cloud_run_invoker" {
+  account_id   = "service-account-id"
+  display_name = "Service Account"
+}
+
 
 #bind it to invoker role
 
